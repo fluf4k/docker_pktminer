@@ -19,7 +19,7 @@ ENV PATH=/cargo/bin:/rust/bin:$PATH
 WORKDIR /
 
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-RUN git clone https://github.com/cjdelisle/packetcrypt_rs.git &&\
+RUN git clone -b develop https://github.com/cjdelisle/packetcrypt_rs.git &&\
       cd packetcrypt_rs &&\
       cargo build --release &&\
       cp target/release/packetcrypt /usr/bin/
