@@ -10,4 +10,4 @@ FROM alpine
 WORKDIR /app
 RUN apk add libgcc
 COPY --from=builder /pkt/packetcrypt_rs/target/release/packetcrypt /app/ 
-CMD ["/app/packetcrypt"]
+ENTRYPOINT ["/app/packetcrypt", "ann", " http://noworries.tech/pool http://pool.pkteer.com"]
