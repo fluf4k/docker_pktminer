@@ -1,6 +1,11 @@
-# Pull and run
-1. docker pull fluf/pktminer
-2. docker run -d fluf/pktminer --t THREADS --p ADDR
+#docker_pktminer
+
+
+## Pull and run
+```
+docker pull fluf/pktminer
+docker run -d fluf/pktminer --t THREADS --p ADDR
+```
 
 ## or build it
 ```
