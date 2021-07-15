@@ -4,7 +4,7 @@ RUN apk add curl rust cargo build-base gcc wget git
 WORKDIR /pkt
 RUN git clone https://github.com/cjdelisle/packetcrypt_rs && \
     cd packetcrypt_rs && \
-    cargo build --release
+    cargo build --release --features portable --target=x86_64-unknown-linux-musl
 
 FROM alpine
 WORKDIR /app
